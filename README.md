@@ -83,7 +83,7 @@ Write a function to connect to the above DB and fetch all records as a list of c
 - Add the library dependencies in [build.sbt](https://github.com/saurabhk-sigmoid/scala-2-sigmoid/blob/main/build.sbt) and import java.sql.DriverManager to able to use mysql-conector-java.
 - make a connection to the mysql server using username and password.
 - create database, and then create one table named as city with mentioned columns which can't be having null values.
-- After succesfully creating the table, add some random records and write an sql query to fetch all the records.
+- After succesfully creating the table, add some records and write an sql query to fetch all the records.
 - [Solution Link](https://github.com/saurabhk-sigmoid/scala-2-sigmoid/blob/main/Code/code_7.scala)
 
 8.After fetching all records of city to a list of class City, write it to a file and read it through spark as a df.
