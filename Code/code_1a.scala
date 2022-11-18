@@ -33,6 +33,5 @@ object MinMaxFinder extends App{
   for (i <- 0 to size - 1) {
     myList(i) = scala.io.StdIn.readInt()
   }
-
   println(minmax(myList))
 }
