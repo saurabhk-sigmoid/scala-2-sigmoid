@@ -98,17 +98,17 @@ followed by all values that are zero or negative, in their original order.
 
 //Code:
 
-import scala.collection.mutable.ListBuffer
+import scala.collection.mutable.ArrayBuffer
 object postive_order extends App {
 
-    def positive_first(values: ListBuffer[Int]) :ListBuffer[Int]= {
+    def positive_first(values: ArrayBuffer[Int]) :ArrayBuffer[Int]= {
         try {
           if (values.isEmpty) {
             throw new NoSuchElementException("Exception: Given list is empty")
           }
           else {
-            var positive = new ListBuffer[Int]
-            var others = new ListBuffer[Int]
+            var positive = new ArrayBuffer[Int]
+            var others = new ArrayBuffer[Int]
 
             for (i <- 0 until values.length) {
               if (values(i) > 0) {
@@ -119,12 +119,12 @@ object postive_order extends App {
 
             }
 
-           return ListBuffer.concat(positive, others)
+           return ArrayBuffer.concat(positive, others)
           }
         }
         catch {
           case error => println(error.getMessage)
-            return ListBuffer()
+            return ArrayBuffer()
         }
 
       }
@@ -132,7 +132,7 @@ object postive_order extends App {
 
       println("Enter size of array: ")
       var size = scala.io.StdIn.readInt()
-      val myList = new ListBuffer[Int]
+      val myList = new ArrayBuffer[Int]
       println("Enter the elements of array is: ")
 
       for (i <- 0 to size-1) {
