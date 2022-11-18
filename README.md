@@ -4,15 +4,51 @@ By Saurabh Kumar
 ## Purpose of this repository
 
 It consists solutions of Scala Assignment.
-## Questions
+## Questions & Solutions
+### Question.1.a
+Write a function minmax(values: Array[Int]) that returns a pair containing the smallest and largest values in the array.
 
-1.Write a function minmax(values: Array[Int]) that returns a pair containing the smallest and largest values in the array.Write a function lteqgt(values: Array[Int], v: Int) that returns a triple containing the counts of values less than v, equal to v, and greater than v.
+### Approach
 
-2.Given an array of integers, produce a new array that contains all positive values of the original array, in their original order, followed by all values that are zero or negative, in their original order.
+- Use min and max to get the minimum and maximum value from the array.
+- Store both the values in other list and return the answer.
+- Use try catch to handle the exception when the list will be empty.
+- [Solution link](https://github.com/saurabhk-sigmoid/scala-2-sigmoid/blob/main/Code/code_1a.scala)
 
-3.Write a function which reads a file/stream and group all anagrams together and print them one by one. (Anagrams means words having the same letters. Both Uppercase and lowercase are same)
+### Question.1.b
+Write a function lteqgt(values: Array[Int], v: Int) that returns a triple containing the counts of values less than v, equal to v, and greater than v.
+
+### Approach
+
+- Create a new array of size three to store the count of value less than v, equal to and greater than v.
+- Run a loop in the given array and check if value of the element at ith position is less than v, equal to or greater than, then add one value to the new array at the respective position.
+- Repeat the same till the end of the array
+- Use try catch to handle the exception when the list will be empty.
+- [Solution Link](https://github.com/saurabhk-sigmoid/scala-2-sigmoid/blob/main/Code/code_1b.scala)
+
+
+### Question.2.
+
+Given an array of integers, produce a new array that contains all positive values of the original array, in their original order, followed by all values that are zero or negative, in their original order.
+
+### Approach
+
+- since we need to update and add the elements in array during run time, we have to use ArrayBufer because array is immutable collection whereas ArrayBuffer is mutable.
+- declare two ArrayBuffer, one for keeping positive elemenets and another one for keeping rest of the elements.
+- run a loop on the given array, and check if element is postive then add it into the postive arrays otherwise add it into the another array.
+- to get the final array, conacat both the arrays.
+- Use try catch to handle the exception when the list will be empty.
+- [Solution Link](https://github.com/saurabhk-sigmoid/scala-2-sigmoid/blob/main/Code/code_2.scala)
+
+### Question.3.
+Write a function which reads a file/stream and group all anagrams together and print them one by one. (Anagrams means words having the same letters. Both Uppercase and lowercase are same)
+
+### Question.4.
 
 4.Write a program that reads words from a file. Use a mutable,immutable and sorted map respectively to count how often each word appears.// source file: https://www.gutenberg.org/cache/epub/35709/pg35709.txt
+
+### Approach
+
 
 5.Write an object Conversions with methods inchesToCentimeters, gallonsToLiters, and milesToKilometers.T\Provide a general superclass UnitConversion and define objects InchesToCentimeters,GallonsToLiters, and MilesToKilometers that extend it.
 
@@ -22,3 +58,14 @@ It consists solutions of Scala Assignment.
 Write a function to connect to the above DB and fetch all records as a list of city. (Hint: Use a table city, create a case class of city and fetch all records.Use mysql-connector-java library)
 
 8.After fetching all records of city to a list of class City, write it to a file and read it through spark as a df.
+
+
+# Solutions
+
+## Question 1.a.
+### Approach
+
+- Use min and max to get the minimum and maximum value from the array.
+- Store both the values in other list and return the answer.
+- Use try catch to handle the exception when the list will be empty.
+- [Solution link](https://github.com/saurabhk-sigmoid/scala-2-sigmoid/blob/main/Code/code_1a.scala)
