@@ -1,4 +1,4 @@
-# Scala Assignment
+# Scala Assignment- Documentation
 By Saurabh Kumar
 
 ## Purpose of this repository
