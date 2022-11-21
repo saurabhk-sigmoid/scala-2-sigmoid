@@ -84,15 +84,16 @@ Write a function to connect to the above DB and fetch all records as a list of c
 - make a connection to the mysql server using username and password.
 - create database, and then create one table named as city with mentioned columns which can't be having null values.
 - After succesfully creating the table, add some records and write an sql query to fetch all the records.
-- [Solution Link](https://github.com/saurabhk-sigmoid/scala-2-sigmoid/blob/main/Code/code_7.scala)
+- [Solution Link](https://github.com/saurabhk-sigmoid/scala-2-sigmoid/blob/main/Code/code_7_and_8.scala)
 
 ### Question.8.
 8.After fetching all records of city to a list of class City, write it to a file and read it through spark as a df.
+
 ### Approach
 - After Inserting the data into the city table, with the help of file writer function insert all data into city_data.csv file.
 - created spark session and converted the csv data into dataframe.
 - print the dataframe using show command.
-- [Solution Link](https://github.com/saurabhk-sigmoid/scala-2-sigmoid/blob/main/Code/code_7.scala)
+- [Solution Link](https://github.com/saurabhk-sigmoid/scala-2-sigmoid/blob/main/Code/code_7_and_8.scala)
 
 Dataframe will look like this:
 ```
