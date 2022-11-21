@@ -87,5 +87,8 @@ Write a function to connect to the above DB and fetch all records as a list of c
 - [Solution Link](https://github.com/saurabhk-sigmoid/scala-2-sigmoid/blob/main/Code/code_7.scala)
 
 8.After fetching all records of city to a list of class City, write it to a file and read it through spark as a df.
-
-
+### Approach
+- After Inserting the data into the city table, with the help of file writer function insert all data into city_data.csv file.
+- created spark session and converted the csv data into dataframe.
+- print the dataframe using show command.
+- [Solution Link](https://github.com/saurabhk-sigmoid/scala-2-sigmoid/blob/main/Code/code_7.scala)
