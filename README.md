@@ -93,3 +93,17 @@ Write a function to connect to the above DB and fetch all records as a list of c
 - created spark session and converted the csv data into dataframe.
 - print the dataframe using show command.
 - [Solution Link](https://github.com/saurabhk-sigmoid/scala-2-sigmoid/blob/main/Code/code_7.scala)
+
+Dataframe will look like this:
+```
++---+-----------+---------+--------------+
+|_c0|        _c1|      _c2|           _c3|
++---+-----------+---------+--------------+
+|  1|uttarakhand|  2636635|    www.uk.com|
+|  2|     serbia|   378435|www.serbia.com|
+|  3|     kanpur|876456210|www.kanpur.com|
+|  4|     kanpur|876456210|www.kanpur.com|
+|  5|     almora|   829464|    www.uk.com|
++---+-----------+---------+--------------+
+
+```
