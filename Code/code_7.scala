@@ -1,5 +1,5 @@
 
-//Question.7.
+//Question.7 and 8.
 /**
 Create a MYSQL schema having a table city with columns: id, name, population,link;
  where id is a serial number which is unique to a record(this can't be null), name is a string
@@ -7,6 +7,8 @@ Create a MYSQL schema having a table city with columns: id, name, population,lin
  and link as a web link to the city. Add some random records.
  Write a function to connect to the above DB and fetch all records as a list of city.
  (Hint: Use a table city, create a case class of city and fetch all records.Use mysql-connector-java library)
+ 
+ 8.After fetching all records of city to a list of class City, write it to a file and read it through spark as a df.
 
  */
 
