@@ -12,8 +12,10 @@ Create a MYSQL schema having a table city with columns: id, name, population,lin
 
 //Code:
 
-import java.sql.DriverManager
 
+import java.io.{FileWriter}
+import java.sql.DriverManager
+import org.apache.spark.sql.SparkSession
 object db extends App {
 
   var connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/saurabh?user=root&password=saurabh@07")
@@ -41,7 +43,28 @@ object db extends App {
   statement.executeUpdate("INSERT INTO city VALUES (5,'almora',829464,'www.uk.com');")
 
   var query = statement.executeQuery("select * from city")
-  while (query.next())
+  while (query.next()) {
     println(query.getInt(1) + "  " + query.getString(2) + "  " + query.getInt(3) + "  " + query.getString(4));
+  }
 
+
+
+  val file_writer = new FileWriter("/Users/Saurabh/IdeaProjects/Scala-assignment/src/main/scala/city_data.csv", true)
+  try {
+    while (query.next()) {
+      file_writer.write(query.getInt(1) + "," + query.getString(2) + "," + query.getInt(3) + "," + query.getString(4) + "\n")
+    }
+  }
+  finally file_writer.close()
+
+  // create a spark session
+  val ss = SparkSession.builder().master("local").appName("CSVBuilder")
+    .config("spark.driver.bindAddress", "127.0.0.1")
+    .getOrCreate()
+
+  ss.sparkContext.setLogLevel("ERROR") // suppress logs on console
+  
+  //making dataframe df
+  var df = ss.read.csv("/Users/Saurabh/IdeaProjects/Scala-assignment/src/main/scala/city_data.csv")
+  df.show() //printing the dataframe output.
 }
