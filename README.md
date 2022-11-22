@@ -43,6 +43,16 @@ Given an array of integers, produce a new array that contains all positive value
 ### Question.3.
 Write a function which reads a file/stream and group all anagrams together and print them one by one. (Anagrams means words having the same letters. Both Uppercase and lowercase are same)
 
+### Approach
+- first created the word list where we stored all space seperated words in the given file.
+- Created a sorted list and booelan list, intitialized the boolean list with false to keep track of visited elements.
+- Run a loop across word list to convert the uppercase to lowercase letters.
+- Created a list buffer inside list buffer of type string to store the anagrams.
+- run two loops in word list, and first check wether the given string visted or not, if not visited check for same string in the remaining list and after the finding the same element add it into temporary list and marked it as true in the boolean list to avoid to visit again.
+- if therer is no element in temporary list after completing loop, add that word into temporary list, and append the same list to the output list.
+- After completion of loop, return the final output list where all anagram have been stored.
+- [Solution Link](https://github.com/saurabhk-sigmoid/scala-2-sigmoid/blob/main/Code/code_3.scala)
+
 ### Question.4.
 
 4.Write a program that reads words from a file. Use a mutable,immutable and sorted map respectively to count how often each word appears.// source file: https://www.gutenberg.org/cache/epub/35709/pg35709.txt
